@@ -16,9 +16,10 @@ def pilihOperator(num1,num2) :
     hasil.append(hitung(num1,num2,4))
     hasil.append(hitung(num1,num2,5))
     for i in [3,2,1,0] :
+        #Jika terdapat operator yang menyebabkan bernilai 24 otomatis pilih operator
+        #tersebut karena memiliki bobot yang lebih besar
         if (selisih(hasil[i],24) == 0) :
             return (i + 2)
-            break
         hasil[i] = (i + 2) - selisih(hasil[i],24)
 
     return (hasil.index(max(hasil)) + 2)
@@ -54,11 +55,12 @@ def hitungHasil(a,b) :
 
 def selisih(x,y) :
     if (x >= y) :
-        return (x-y)
+        return (x - y)
     else :
         return (y - x)
 
 def f(x):
+    #konversi operator dari int ke string
     if (x == 5) :
         return '+'
     elif (x == 4) :
