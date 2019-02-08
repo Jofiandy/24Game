@@ -27,7 +27,7 @@ def generateRandomCards():
             pic[x] = "Cards_2/" + randomcard + ".png"
             randomcard=randomcard[:-1]
             selectedCards.append(int(randomcard))
-        except IndexError:
+        except (IndexError,ValueError):
             GameOverText = Label(game, text='Game Over!', bg='#90AB76', font=25)
             GameOverText.place(x=380, y=50)
             showGameOverButton = Button(game, text = 'Restart!', command = restartGame)
@@ -51,7 +51,6 @@ def generateRandomCards():
     total_skor+=Skor
 
     str1 = ''.join(Ekspresi)
-    print(str1)
     ekspresiText = Label(game, text=(str1 +'='+str(hasil)), bg='#90AB76', font=25, borderwidth=50, relief='flat');ekspresiText.place(x=380, y=70)
     totalSkorText = Label(game, text='Total Skor: '+str(total_skor), bg='#90AB76', font=25, borderwidth=20,relief='flat');totalSkorText.place(x=440, y=10)
 
