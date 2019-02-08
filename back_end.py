@@ -76,24 +76,15 @@ def hitungSkor(a, b, hasil) :
 
 def tampilEkspresi(a,b, hasil) :
     if (hitungHasil(a,b) == hasil) :
-        print(a[0], f(b[0]), a[1], f(b[1]), a[2], f(b[2]), a[3])
+        ekspresi = a[0], f(b[0]), a[1], f(b[1]), a[2], f(b[2]), a[3]
     else :
         if ((b[0] == 5 or b[0] == 4) and (b[1] == 3 or b[1] == 2)) :
-            print('(',a[0], f(b[0]), a[1],')', f(b[1]), a[2], f(b[2]), a[3])
+            ekspresi = '(',a[0], f(b[0]), a[1],')', f(b[1]), a[2], f(b[2]), a[3]
         elif ((b[1] == 5 or b[1] == 4) and (b[2] == 3 or b[2] == 2)) :
-            print('(',a[0], f(b[0]), a[1], f(b[1]), a[2],')', f(b[2]), a[3])
+            ekspresi = '(',a[0], f(b[0]), a[1], f(b[1]), a[2],')', f(b[2]), a[3]
+    return ekspresi
 
-def menuGame() :
-    a = []
-    b = []
-    n = int(input("Bilangan 1 > "))
-    a.append(n)
-    n = int(input("Bilangan 2 > "))
-    a.append(n)
-    n = int(input("Bilangan 3 > "))
-    a.append(n)
-    n = int(input("Bilangan 4 > "))
-    a.append(n)
+def operateResult(a,b) :
     a.sort(reverse=True)
     b.append(pilihOperator(a[0],a[1]))
     hasil = hitung(a[0],a[1],b[0])
@@ -102,9 +93,7 @@ def menuGame() :
     b.append(pilihOperator(hasil,a[3]))
     hasil = hitung(hasil,a[3],b[2])
 
-    tampilEkspresi(a,b,hasil)
-    print("Hasil perhitungan = ", hasil)
-    print("Skor = ", hitungSkor(a,b,hasil))
+    return hasil
 
 def menuFileEksternal() :
     deck = open("input.txt", "r")
@@ -146,11 +135,11 @@ def menuFileEksternal() :
     tampilan.close()
     print("Total skor : ", total_skor)
 
-print("Selamat datang di permainan 24")
-print("1. User")
-print("2. File")
-pilihan = int(input("> "))
-if (pilihan == 1):
-    menuGame()
-else :
-    menuFileEksternal();
+# print("Selamat datang di permainan 24")
+# print("1. User")
+# print("2. File")
+# pilihan = int(input("> "))
+# if (pilihan == 1):
+#     menuGame()
+# else :
+#     menuFileEksternal()
