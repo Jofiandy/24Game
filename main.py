@@ -1,5 +1,7 @@
 from back_end import *
 from front_end import *
+from test import *
+from tkinter import *
 
 listcards = front_end.generateListCards()
 usedcards = []

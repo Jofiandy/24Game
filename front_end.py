@@ -50,8 +50,10 @@ def generateRandomCards():
     Skor = hitungSkor(selectedCards,operatedCards,hasil)
     total_skor+=Skor
 
-    ekspresiText = Label(game, text=str(Ekspresi)+'='+str(hasil), bg='#90AB76', font=25);ekspresiText.place(x=380, y=70)
-    totalSkorText = Label(game, text='Total Skor: '+str(total_skor), bg='#90AB76', font=25);totalSkorText.place(x=440, y=10)
+    str1 = ''.join(Ekspresi)
+    print(str1)
+    ekspresiText = Label(game, text=(str1 +'='+str(hasil)), bg='#90AB76', font=25, borderwidth=50, relief='flat');ekspresiText.place(x=380, y=70)
+    totalSkorText = Label(game, text='Total Skor: '+str(total_skor), bg='#90AB76', font=25, borderwidth=20,relief='flat');totalSkorText.place(x=440, y=10)
 
 def restartGame():
     python = sys.executable
