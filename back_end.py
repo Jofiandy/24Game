@@ -16,6 +16,17 @@ def pilihOperator(num1,num2) :
     hasil.append(hitung(num1,num2,4))
     hasil.append(hitung(num1,num2,5))
     for i in [3,2,1,0] :
+        hasil[i] = (i + 2) - selisih(hasil[i],24)
+
+    return (hasil.index(max(hasil)) + 2)
+
+def pilihOperatorTerakhir(num1,num2) :
+    hasil = []
+    hasil.append(hitung(num1,num2,2))
+    hasil.append(hitung(num1,num2,3))
+    hasil.append(hitung(num1,num2,4))
+    hasil.append(hitung(num1,num2,5))
+    for i in [3,2,1,0] :
         #Jika terdapat operator yang menyebabkan bernilai 24 otomatis pilih operator
         #tersebut karena memiliki bobot yang lebih besar
         if (selisih(hasil[i],24) == 0) :
@@ -92,7 +103,7 @@ def operateResult(a,b) :
     hasil = hitung(a[0],a[1],b[0])
     b.append(pilihOperator(hasil,a[2]))
     hasil = hitung(hasil,a[2],b[1])
-    b.append(pilihOperator(hasil,a[3]))
+    b.append(pilihOperatorTerakhir(hasil,a[3]))
     hasil = hitung(hasil,a[3],b[2])
 
     return hasil
