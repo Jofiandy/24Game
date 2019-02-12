@@ -23,7 +23,7 @@ def menuFileEksternal(file_1, file_2) :
             hasil = hitung(a[0],a[1],b[0])
             b.append(pilihOperator(hasil,a[2]))
             hasil = hitung(hasil,a[2],b[1])
-            b.append(pilihOperator(hasil,a[3]))
+            b.append(pilihOperatorTerakhir(hasil,a[3]))
             hasil = hitung(hasil,a[3],b[2])
 
             if (hitungHasil(a,b) == hasil) :

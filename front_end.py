@@ -29,11 +29,9 @@ def generateRandomCards():
             randomcard=randomcard[:-1]
             selectedCards.append(int(randomcard))
         except (IndexError,ValueError):
-            # GameOverText = Label(game, text='Game Over!', bg='#90AB76', font=25)
-            # GameOverText.place(x=380, y=50)
             showGameOverButton = Button(game, text = 'Restart!', command = restartGame)
             showGameOverButton.pack()
-            showGameOverButton.place(x=90, y= 170)
+            showGameOverButton.place(x=90, y= 200)
 
     card1 = PhotoImage(file = pic[0]); card1 = card1.subsample(2, 2)
     card2 = PhotoImage(file = pic[1]); card2 = card2.subsample(2, 2)
@@ -51,7 +49,8 @@ def generateRandomCards():
     total_skor+=Skor
 
     str1 = ''.join(Ekspresi)
-    ekspresiText = Label(game, text=("Kalkulasi   : "+str1 +'='+str(hasil)), bg='#90AB76', font=("Segoe UI Black", 15), borderwidth=50, relief='flat');ekspresiText.place(x=40, y=60)
+    ekspresiText = Label(game, text=("Kalkulasi   : "+str1 +'='+str(hasil)), bg='#90AB76', font=("Segoe UI Black", 15), borderwidth=50, relief='flat');ekspresiText.place(x=40, y=120)
+    skorText = Label(game, text='Skor ronde ini : '+str(Skor), bg='#90AB76', font=("Segoe UI Black", 15), borderwidth=50, relief='flat');skorText.place(x=40, y=50)
     totalSkorText = Label(game, text='Total Skor : '+str(total_skor), bg='#90AB76', font=("Segoe UI Black", 15), borderwidth=20,relief='flat');totalSkorText.place(x=70, y=40)
 
 def restartGame():
