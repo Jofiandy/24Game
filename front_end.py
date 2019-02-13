@@ -83,4 +83,3 @@ showBackCard.place(x=695, y= 45)
 
 # MainKartuKuy()
 game.mainloop()
-

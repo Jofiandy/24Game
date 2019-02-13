@@ -39,4 +39,4 @@ def menuFileEksternal(file_1, file_2) :
     deck.close()
     tampilan.close()
 
-menuFileEksternal(file_1, file_2);
+menuFileEksternal(file_1, file_2)
