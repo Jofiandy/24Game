@@ -1,5 +1,7 @@
 # 24Game
-Tubes 1 Strategi Algoritma
+Program for School's Project.
+
+This Program is a game card to test Greedy Algorithm.
 
 Yang test.py di run dengan command : 
     ```python3 test.py input.txt output.txt```
