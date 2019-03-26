@@ -1,5 +1,5 @@
 from sys import argv
-from back_end import *
+from greedy_algorithm import *
 
 script, file_1, file_2 = argv
 

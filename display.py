@@ -1,5 +1,5 @@
 from tkinter import *
-from back_end import *
+from greedy_algorithm import *
 import random
 import os
 import sys

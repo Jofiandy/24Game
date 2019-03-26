@@ -1,12 +1,12 @@
 # 24Game
+
 Program for School's Project.
 
 This Program is a game card to test Greedy Algorithm.
 
-Yang test.py di run dengan command : 
-    ```python3 test.py input.txt output.txt```
-di terminal, yang artinya ambil input dari input.txt dan tulis output di output.txt
+To run the program:
+python3 display.py
 
-Louis Cahyadi <br />
-Jofiandy <br />
-Johanes Boas <br />
+For display_readfile:
+python3 display_readfile.py input.txt output.txt
+in terminal, that will take an input from input.txt and write the result or output in output.txt
